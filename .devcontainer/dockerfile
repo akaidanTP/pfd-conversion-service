@@ -1,0 +1,21 @@
+FROM node:16-alpine
+
+# Puppeteer downloaded chromium will not work on Alpine
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
+# Install chromium and support packages, add "puppeteer" user
+RUN apk add --no-cache chromium \
+    nss \
+    freetype \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont && \
+    adduser -h /app -D puppeteer
+
+WORKDIR /app
+
+# Prevent sandboxing from being required
+USER puppeteer
+
+RUN npm i puppeteer@v10.2.0

@@ -1,0 +1,19 @@
+{
+  "name": "pdf-converter-service",
+  "version": "0.0.0",
+  "description": "Used to convert html to pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akaidanTP/pfd-conversion-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akaidanTP/pfd-conversion-service/issues"
+  },
+  "homepage": "https://github.com/akaidanTP/pfd-conversion-service#readme"
+}
