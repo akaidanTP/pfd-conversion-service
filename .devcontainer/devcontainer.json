@@ -12,7 +12,15 @@
     },
     // Set *default* container specific settings.json values on container create.
     "settings": {
-        "typescript.tsdk": "node_modules/typescript/lib"
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "terminal.integrated.enableShellIntegration": true,
+        // "terminal.integrated.shell.linux": "bash",
+        // "terminal.integrated.profiles.linux": {
+        //   "bash (container default)": {
+        //     "path": "/usr/bin/bash",
+        //     "overrideName": true
+        //   }
+        // }
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
