@@ -1,11 +1,16 @@
 version: '3'
 services:
-  devcontainer:
+  pdf-generator:
     build:
       context: .
       args:
         VARIANT: 16
     # Override the command so that the container does not shut down
-    command: sleep infinity
+    command: node /app/src/index.js
+
+    ports:
+      - 3005:3005
+    volumes:
+      - .:/app:rw
     environment:
       - PORT=3005
