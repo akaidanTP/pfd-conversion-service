@@ -6,11 +6,11 @@ services:
       args:
         VARIANT: 16
     # Override the command so that the container does not shut down
-    command: node /app/src/index.js
+    command: yarn start
 
     ports:
       - 3005:3005
     volumes:
-      - .:/app:rw
+      - .:/app:cached
     environment:
       - PORT=3005

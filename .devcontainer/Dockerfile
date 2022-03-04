@@ -1,4 +1,4 @@
-FROM alpine
+FROM mcr.microsoft.com/vscode/devcontainers/base:alpine-3.14
 
 # Installs latest Chromium (92) package.
 RUN apk add --no-cache \
@@ -28,7 +28,3 @@ RUN addgroup -S pptruser && adduser -S -G pptruser pptruser \
 
 # Run everything after as non-privileged user.
 USER pptruser
-
-COPY . /app
-
-WORKDIR /app
