@@ -12,8 +12,8 @@ Please be sure to have docker and docker compose installed
 
 ## Paths
 
-post `/api/pdf/html` `{html: '<html here>'}` 
-post `/api/pdf/url` `{url: '<valid url here>'}` 
+- post `/api/pdf/html` `{html: '<html here>'}` 
+- post `/api/pdf/url` `{url: '<valid url here>'}` 
 
 ## Current state
 
