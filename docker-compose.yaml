@@ -8,6 +8,8 @@ services:
     # Override the command so that the container does not shut down
     command: yarn start
 
+    security_opt:
+      - seccomp=./src/lib/chrome.json
     ports:
       - 3005:3005
     volumes:
